@@ -1,0 +1,59 @@
+{% extends "app/base.html" %}
+{% load  %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+{% block content %}
+<div class="container">
+    <div class="row">
+       
+      <div class="col">
+        <div class="centered-block">
+          
+          <div class="position-relative ">
+            <br>
+            <br> 
+            <br>   
+         <h1 class="text-success">𝓞𝓾𝓻 𝓜𝓮𝓷𝓾</h1>  
+         <br> 
+       
+        <h4><b><span style="color: rgb(244, 88, 16);">Our menu is more than just momos, </span></b></h4>
+        <h4><b><span style="color: rgb(12, 12, 12);">with a variety of dishes to cater to all tastes and preferences.</span></b></h4>
+                
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <br>
+      <br>
+      <!--  -->
+<div class="container text-center">
+    <h2>❀ꗥ～ꗥ❀ <span style="color: rgb(244, 88, 16);"> 𝐂𝐇𝐈𝐂𝐊𝐄𝐍 𝐑𝐄𝐂𝐄𝐈𝐏𝐄𝐒'𝐬 </span>❀ꗥ～ꗥ❀<h2>
+    </div>
+    <div class="vstack gap-5">
+      <div class="container">
+        <div class="col-1"></div>
+        <div class="row row-cols-4">
+          
+          {% for i in data2 %} 
+          
+          <div class="col-3">
+            <br>
+            
+            <div class="card" style="width: 16rem;height:17rem">
+                <img src="{{i.image.url}}" class="card-img-top"style="width: 16rem;height:12rem"alt="..." >
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{i.title|truncatechars:35}}</b></h5>
+                    
+                    <p>Price :Rs.{{i.price}} </p>
+                    
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+
+        {% endblock content %} 
